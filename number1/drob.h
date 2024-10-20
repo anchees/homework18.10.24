@@ -1,11 +1,11 @@
 class drob{
-    private:
-        int zn[3];
-        int ch[3];
-    public:
-        int getch(int ch);
-        void setch(int ch);
-
-        int getzn(int zn);
-        void setzn(int zn);
+public:
+    int zn;
+    int ch;
+    void vvod();
+    void vivod();
+    void plus(drob drob1, drob drob2, drob res);    
+    void minus(drob drob1, drob drob2, drob res);
+    void umnoz(drob drob1, drob drob2, drob res);
+    void del(drob drob1, drob drob2, drob res);
 };
