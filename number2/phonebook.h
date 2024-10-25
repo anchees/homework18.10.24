@@ -33,7 +33,7 @@ public:
     inline string& getmobilep() { return mobilep; }
     inline string& getmoreinfo() { return moreinfo; }
     // void vvod();
-    void filevvod(ifstream &book);
+    void filevvod(ifstream &book, int proverka);
     void filevivod(ofstream &bookin);
     void vivod();
     void delet();

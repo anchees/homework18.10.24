@@ -21,14 +21,15 @@ void phoneb::vivod(){
         cout<<"Work phone: "<< getworkp() << endl;
         cout<<"Mobile phone: "<< getmobilep() << endl;
         cout<<"More info: "<< getmoreinfo() << endl; 
-
+    } else {
+        cout<<"ghost"<<endl;
     }
 }
 
-void phoneb::filevvod(ifstream &book){   
+void phoneb::filevvod(ifstream &book, int proverka){   
     string musor="";
     getline(book, musor);
-    if (musor!=""){
+    if (musor!="" && proverka==0){
         getline(book, nname); 
         getline(book, homep);
         getline(book, workp);
@@ -36,7 +37,7 @@ void phoneb::filevvod(ifstream &book){
         getline(book, moreinfo);
         name = new char[nname.length() + 1];
         strcpy(name, nname.c_str());
-    }else{
+    }else if (getname()==nullptr && proverka>0) {
         cout<<"Enter full name: ";
         getline(cin, nname);
         cout<<"Enter home phone: ";
@@ -49,6 +50,7 @@ void phoneb::filevvod(ifstream &book){
         getline(cin, moreinfo);
         name = new char[nname.length() + 1];
         strcpy(name, nname.c_str()); 
+        proverka=0;
     }
 }
 
